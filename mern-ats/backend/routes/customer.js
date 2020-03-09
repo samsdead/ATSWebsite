@@ -10,10 +10,26 @@ router.route('/').get((req, res) => {
 router.route('/add').post((req, res) => {
   const id = req.body.id;
   const firstName = req.body.firstName;
+  const lastName = req.body.lastName;
+  const dOB = req.body.dOB;
+  const telephoneNo = req.body.telephoneNo;
+  const email = req.body.email;
+  const isValued = req.body.isValued;
+  const discountID = req.body.discountID;
+  const addressID = req.body.addressID;
+  const discountRateID = req.body.discountRateID;
 
   const newCustomer = new Customer({
     id,
     firstName,
+    lastName,
+    dOB,
+    telephoneNo,
+    email,
+    isValued,
+    discountID,
+    addressID,
+    discountRateID
   });
 
   newCustomer.save()
@@ -38,6 +54,14 @@ router.route('/update/:id').post((req, res) => {
     .then(customer => {
       customer.id = req.body.id;
       customer.firstName = req.body.firstName;
+      customer.lastName = req.body.lastName;
+      customer.telephoneNo = req.body.telephoneNo;
+      customer.email = req.body.email;
+      customer.isValued = req.body.isValued;
+      customer.discountID = req.body.discountID;
+      customer.addressID = req.body.addressID;
+      customer.discountRateID = req.body.discountRateID;
+
 
       customer.save()
         .then(() => res.json('Customer updated!'))

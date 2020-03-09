@@ -11,7 +11,7 @@ const customerSchema = new Schema({
   isValued:{type: Boolean},
   discountID: {type: Number, unique: true},
   addressID:{type: Number, unique: true},
-  DiscountRateID: {type: Number, unique: true}
+  discountRateID: {type: Number, unique: true}
 },
 
 {
