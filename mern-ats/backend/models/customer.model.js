@@ -6,6 +6,7 @@ const customerSchema = new Schema({
     type: int,
     required: true,
     unique: true,
+    trim: true,
     minlength: 10
   },
   firstName: {
@@ -16,5 +17,7 @@ const customerSchema = new Schema({
   },
 },{
   timestamps: true,
-}
-);
+});
+
+const Customer = mongoose.model('Customer', customerSchema);
+module.exports = Customer;
