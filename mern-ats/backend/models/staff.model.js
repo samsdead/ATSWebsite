@@ -3,14 +3,14 @@ const Schema = mongoose.Schema;
 
 const staffSchema = new Schema({
   id: {
-    type: int,
+    type: Number,
     required: true,
     unique: true,
     trim: true,
     minlength: 10
   },
   firstName: {
-    type: char,
+    type: String,
     required: true,
     unique: false,
     minlength: 2
