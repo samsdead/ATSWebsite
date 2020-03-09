@@ -11,6 +11,7 @@ router.route('/add').post((req, res) => {
   const id = req.body.id;
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
+  // here use Date.parse(req.body.date)
   const dOB = req.body.dOB;
   const telephoneNo = req.body.telephoneNo;
   const email = req.body.email;
