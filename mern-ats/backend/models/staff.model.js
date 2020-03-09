@@ -19,5 +19,5 @@ const staffSchema = new Schema({
   timestamps: true,
 });
 
-const Staff = mongoose.model('Staff', customerSchema);
+const Staff = mongoose.model('Staff', staffSchema);
 module.exports = Staff;
