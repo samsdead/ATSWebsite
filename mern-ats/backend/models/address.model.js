@@ -14,5 +14,5 @@ const addressSchema = new Schema({
   timestamps: true,
 });
 
-const Address = mongoose.model('Adress', addressSchema);
+const Address = mongoose.model('Address', addressSchema);
 module.exports = Address;
