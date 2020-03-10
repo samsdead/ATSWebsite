@@ -38,8 +38,8 @@ connection.once('open', () => {
  app.use('/blanks', blanksRouter);
  app.use('/stock', stockRouter);
  app.use('/currencyExchangeRate', currencyExchangeRateRouter);
- app.user('/commissionRate', commissionRateRouter);
- 
+ app.use('/commissionRate', commissionRateRouter);
+
 
 
 app.listen(port, () => {
