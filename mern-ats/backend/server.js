@@ -22,12 +22,14 @@ connection.once('open', () => {
  const staffRouter = require('./routes/staff');
  const addressRouter = require('./routes/address');
  const couponsRouter = require('./routes/coupons');
+ const ticketSalesRouter = require ('./routes/ticketSales');
+
 
  app.use('/customer', customersRouter);
  app.use('/staff', staffRouter);
  app.use('/address', addressRouter);
  app.use('/coupons', couponsRouter);
-
+ app.use('/ticketSales', ticketSalesRouter);
 
 
 app.listen(port, () => {
