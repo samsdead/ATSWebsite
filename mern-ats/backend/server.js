@@ -27,7 +27,7 @@ connection.once('open', () => {
  const stockRouter = require('./routes/stock');
  const currencyExchangeRateRouter = require('./routes/currencyExchangeRate');
  const commissionRateRouter = require('./routes/commissionRate');
-
+ const paymentInformationRouter = require('./routes/paymentInformation');
 
 
  app.use('/customer', customersRouter);
@@ -39,6 +39,7 @@ connection.once('open', () => {
  app.use('/stock', stockRouter);
  app.use('/currencyExchangeRate', currencyExchangeRateRouter);
  app.use('/commissionRate', commissionRateRouter);
+ app.use('/paymentInformation', paymentInformationRouter);
 
 
 
