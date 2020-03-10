@@ -25,6 +25,7 @@ connection.once('open', () => {
  const ticketSalesRouter = require('./routes/ticketSales');
  const blanksRouter = require('./routes/blanks');
  const stockRouter = require('./routes/stock');
+ const currencyExchangeRateRouter = require('./routes/currencyExchangeRate');
 
 
 
@@ -35,6 +36,7 @@ connection.once('open', () => {
  app.use('/ticketSales', ticketSalesRouter);
  app.use('/blanks', blanksRouter);
  app.use('/stock', stockRouter);
+ app.use('/currencyExchangeRate', currencyExchangeRateRouter);
 
 
 app.listen(port, () => {
