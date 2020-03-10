@@ -37,7 +37,7 @@ router.route('/:id').delete((req, res) => {
 
 router.route('/update/:id').post((req, res) => {
   CommissionRate.findById(req.params.id)
-    .then(stock => {
+    .then(commissionRate => {
 
       commissionRate.id = req.body.id;
       commissionRate.rate = req.body.rate;
