@@ -22,8 +22,10 @@ connection.once('open', () => {
  const staffRouter = require('./routes/staff');
  const addressRouter = require('./routes/address');
  const couponsRouter = require('./routes/coupons');
- const ticketSalesRouter = require ('./routes/ticketSales');
+ const ticketSalesRouter = require('./routes/ticketSales');
  const blanksRouter = require('./routes/blanks');
+ const stockRouter = require('./routes/stock');
+
 
 
  app.use('/customer', customersRouter);
@@ -32,6 +34,7 @@ connection.once('open', () => {
  app.use('/coupons', couponsRouter);
  app.use('/ticketSales', ticketSalesRouter);
  app.use('/blanks', blanksRouter);
+ app.use('/stock', stockRouter);
 
 
 app.listen(port, () => {
