@@ -23,6 +23,7 @@ connection.once('open', () => {
  const addressRouter = require('./routes/address');
  const couponsRouter = require('./routes/coupons');
  const ticketSalesRouter = require ('./routes/ticketSales');
+ const blanksRouter = require('./routes/blanks');
 
 
  app.use('/customer', customersRouter);
@@ -30,6 +31,7 @@ connection.once('open', () => {
  app.use('/address', addressRouter);
  app.use('/coupons', couponsRouter);
  app.use('/ticketSales', ticketSalesRouter);
+ app.use('/blanks', blanksRouter);
 
 
 app.listen(port, () => {
