@@ -47,7 +47,7 @@ router.route('/:id').delete((req, res) => {
 
 router.route('/update/:id').post((req, res) => {
   PaymentInformation.findById(req.params.id)
-    .then(stock => {
+    .then(paymentInformation => {
       paymentInformation.id = req.body.id;
       paymentInformation.title = req.body.title;
       paymentInformation.nameOnCard = req.body.nameOnCard;
