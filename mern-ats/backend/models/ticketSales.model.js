@@ -5,7 +5,7 @@ const ticketSalesSchema = new Schema({
   ticketId: {type: Number, required: true, unique: true, trim: true, minlength: 10},
   amountPaid: {type: Number, required: true},
   isPaid: {type: Boolean, required: true},
-  dateSold: {type: Number, required: true},
+  dateSold: {type: Date},
   currency: {type: String, required: true},
   paymentType:{type: String},
   staffID:{type: Number},
