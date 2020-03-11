@@ -6,7 +6,7 @@ const paymentInformationSchema = new Schema({
   title: {type: String, required: true, minlength: 2},
   nameOnCard: {type: String, required: true, minlength: 2},
   cardNumber:{type: Number},
-  expiryDate: {type: Number},
+  expiryDate: {type: Date},
   date: {type: Date},
   securityCode:{type: Number},
   customerID: {type: String, unique: true},
