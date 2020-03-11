@@ -11,7 +11,7 @@ router.route('/add').post((req, res) => {
   const id = req.body.id;
   const rate = req.body.rate;
   const currencyCode = req.body.currencyCode;
-  const date = req.body.date;
+  const date = Date.parse(req.body.date);
 
   const newCurrencyExchangeRate = new CurrencyExchangeRate({
     id,
@@ -43,7 +43,7 @@ router.route('/update/:id').post((req, res) => {
       currencyExchangeRate.id = req.body.id;
       currencyExchangeRate.rate = req.body.rate;
       currencyExchangeRate.currencyCode = req.body.currencyCode;
-      currencyExchangeRate.date = req.body.date;
+      currencyExchangeRate.date = Date.parse(req.body.date);
 
 
 

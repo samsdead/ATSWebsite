@@ -10,7 +10,7 @@ router.route('/').get((req, res) => {
 router.route('/add').post((req, res) => {
   const id = req.body.id;
   const rate = req.body.rate;
-  const date = req.body.date;
+  const date = Date.parse(req.body.date);
 
   const newCommissionRate = new CommissionRate({
     id,
@@ -41,7 +41,7 @@ router.route('/update/:id').post((req, res) => {
 
       commissionRate.id = req.body.id;
       commissionRate.rate = req.body.rate;
-      commissionRate.date = req.body.date;
+      commissionRate.date = Date.parse(req.body.date);
 
 
 

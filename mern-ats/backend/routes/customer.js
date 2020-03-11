@@ -11,8 +11,7 @@ router.route('/add').post((req, res) => {
   const id = req.body.id;
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
-  // here use Date.parse(req.body.date)
-  const dOB = req.body.dOB;
+  const dOB = Date.parse(req.body.dOB);
   const telephoneNo = req.body.telephoneNo;
   const email = req.body.email;
   const isValued = req.body.isValued;
@@ -56,6 +55,7 @@ router.route('/update/:id').post((req, res) => {
       customer.id = req.body.id;
       customer.firstName = req.body.firstName;
       customer.lastName = req.body.lastName;
+      customer.dOB = Date.parse(req.body.dOB);
       customer.telephoneNo = req.body.telephoneNo;
       customer.email = req.body.email;
       customer.isValued = req.body.isValued;

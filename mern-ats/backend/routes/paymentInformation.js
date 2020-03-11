@@ -12,8 +12,8 @@ router.route('/add').post((req, res) => {
   const title = req.body.title;
   const nameOnCard = req.body.nameOnCard;
   const cardNumber = req.body.cardNumber;
-  const expiryDate = req.body.expiryDate;
-  const date = req.body.date;
+  const expiryDate = Date.parse(req.body.expiryDate);
+  const date = Date.parse(req.body.date);
   const securityCode = req.body.securityCode;
   const customerID = req.body.customerID;
 
@@ -52,8 +52,8 @@ router.route('/update/:id').post((req, res) => {
       paymentInformation.title = req.body.title;
       paymentInformation.nameOnCard = req.body.nameOnCard;
       paymentInformation.cardNumber = req.body.cardNumber;
-      paymentInformation.expiryDate = req.body.expiryDate;
-      paymentInformation.date = req.body.date;
+      paymentInformation.expiryDate = Date.parse(req.body.expiryDate);
+      paymentInformation.date = Date.parse(req.body.date);
       paymentInformation.securityCode = req.body.securityCode;
       paymentInformation.customerID = req.body.customerID;
 

@@ -11,7 +11,7 @@ router.route('/add').post((req, res) => {
   const id = req.body.id;
   const blanksNum = req.body.blanksNum;
   const status = req.body.status;
-  const date = req.body.date;
+  const date = Date.parse(req.body.date);
   const customerID = req.body.customerID;
   const couponsID = req.body.couponsID;
 
@@ -47,7 +47,7 @@ router.route('/update/:id').post((req, res) => {
       blanks.id = req.body.id;
       blanks.blanksNum = req.body.blanksNum;
       blanks.status = req.body.status;
-      blanks.date = req.body.date;
+      blanks.date = Date.parse(req.body.date);
       blanks.customerID = req.body.customerID;
       blanks.couponsID = req.body.couponsID;
 
